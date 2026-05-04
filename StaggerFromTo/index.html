@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Método StaggerFromTo</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 id="title">GSAP: Método StaggerFromTo()</h1>
+    <p>
+      Método similar ao To, From, FromTo, só que tem manipulação do tempo com
+      delays e é aplicado em listas.
+    </p>
+
+    <section class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </section>
+  </body>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script>
+    const container = document.querySelector(".container");
+    const title = document.getElementById("title");
+    const items = document.querySelectorAll(".item");
+
+    TweenMax.staggerFromTo(
+      items,
+      2,
+      {
+        scale: 0,
+        rotate: "0deg",
+      },
+      {
+        scale: 1,
+        rotate: "360deg",
+        // ease: "bounce.inOut",
+      },
+      0.3,
+    );
+
+    gsap.from(title, {
+      color: "red",
+      scale: 0.3,
+      opaciy: 0,
+      duration: 5,
+    });
+  </script>
+</html>
