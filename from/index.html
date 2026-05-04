@@ -33,8 +33,10 @@
     // TweenMax.set(title, {
     //   color: "red",
     // });
-    gsap.from(container, 2, {
+    gsap.from(container, {
       y: 200,
+      ease: "elastic.inOut(1, 0.3)",
+      duration: 5,
     });
 
     gsap.set(title, {
