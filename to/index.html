@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GSAP Método SET</title>
+    <title>GSAP Método TO</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1 id="title">GSAP: Método SET()</h1>
-    <p>É um método que seta as config iniciais do elemento.</p>
+    <h1 id="title">GSAP: Método TO()</h1>
+    <p>É um método que seta as config finais do elemento.</p>
 
     <section class="container">
       <div class="item"></div>
@@ -27,18 +27,14 @@
   <script>
     const container = document.querySelector(".container");
     const title = document.getElementById("title");
-    // TweenMax.set(container, {
-    //   x: -50,
-    //   y: 0,
-    //   skewX: "-30deg",
+    // TweenMax.to(container, 2, {
+    //   y: 200,
     // });
     // TweenMax.set(title, {
     //   color: "red",
     // });
-    gsap.set(container, {
-      x: -50,
-      y: 0,
-      skewX: -30,
+    gsap.to(container, 2, {
+      y: 200,
     });
 
     gsap.set(title, {
