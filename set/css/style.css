@@ -11,4 +11,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  height: 300px;
+  margin: 0 auto;
+  border: 1px solid red;
 }/*# sourceMappingURL=style.css.map */
