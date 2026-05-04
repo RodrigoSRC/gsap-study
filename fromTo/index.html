@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Método FromTo</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 id="title">GSAP: Método FromTo()</h1>
+    <p>
+      Em um mesmo método vamos definir as características do ponto inicial e do
+      ponto final.
+    </p>
+
+    <section class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </section>
+  </body>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script>
+    const container = document.querySelector(".container");
+    const title = document.getElementById("title");
+
+    gsap.fromTo(
+      container,
+      3,
+      {
+        // config inicial
+        y: -100,
+      },
+      {
+        // config final
+        y: 100,
+        ease: "bounce.inOut",
+        // duration: 5,
+      },
+    );
+
+    gsap.from(title, {
+      color: "red",
+      scale: 0.3,
+      opaciy: 0,
+      duration: 5,
+    });
+  </script>
+</html>
