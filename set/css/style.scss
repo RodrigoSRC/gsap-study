@@ -13,6 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .container {
@@ -21,4 +22,15 @@ body {
 
   margin: 0 auto;
   border: 1px solid red;
+}
+
+h1 {
+  color: #fff;
+  //   font-size: 2rem;
+  margin: 16px 0;
+}
+
+p {
+  color: #ccc;
+  //   font-size: 1.2rem;
 }
