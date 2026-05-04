@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GSAP Método TO</title>
+    <title>GSAP Método From</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1 id="title">GSAP: Método TO()</h1>
+    <h1 id="title">GSAP: Método From()</h1>
     <p>É um método que seta as config finais do elemento.</p>
 
     <section class="container">
@@ -33,17 +33,8 @@
     // TweenMax.set(title, {
     //   color: "red",
     // });
-
-    // gsap.to(container, 2, {
-    //   y: 200,
-    //   ease: "elastic.inOut(1, 0.3)",
-    //   duration: 2,
-    // });
-
-    gsap.to(container, {
+    gsap.to(container, 2, {
       y: 200,
-      ease: "elastic.inOut(1, 0.3)",
-      duration: 2,
     });
 
     gsap.set(title, {
